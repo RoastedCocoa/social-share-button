@@ -3,8 +3,11 @@ window.SocialShareButton =
     window.open(url)
     false
     
-  share : (site, title) ->
-    url = encodeURIComponent(location.href)
+  share : (site, title, url) ->
+    console.log(title)
+    console.log("The url is" + url)
+    if url == "" or url == null
+      url = encodeURIComponent(location.href)
     title = encodeURIComponent(title)
     switch site
       when "weibo"
