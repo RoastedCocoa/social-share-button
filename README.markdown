@@ -10,12 +10,12 @@ This is a gem to helper you quick create a share feature in you Rails apps.
 
 in your `Gemfile`:
 
-    gem 'social_share_button'
+    gem 'social-share-button'
     
 an install it:
 
     $ bundle install
-    $ rails generate social_share_button:install
+    $ rails generate social-share-button:install
     
 ## Configure
 
@@ -44,7 +44,14 @@ then you can use `social_share_button_tag` helper in views, for example `app/vie
 and you can custom rel attribute:
 
     <%= social_share_button_tag(@post.title, :rel => "twipsy") %>
+
+### Providing custom urls
+
+If you need to have a custom url (for embedded posts, sharing comments, reviews, replies etc) just pass in the url like so:
+
+  <%= social_share_button_tag(@post.title, "http://my_site.co/custom_url.html?comment=last_comment") %>
     
 ## Demo
 
+TODO: Update demo to show new url
 [http://ruby-china.org/wiki/about](http://ruby-china.org/wiki/about)
